@@ -1,0 +1,97 @@
+[ 2025-04-03 21:37:20,070 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-04-03 21:37:20,076 ] 97 werkzeug - INFO -  * Debugger PIN: 509-397-375
+[ 2025-04-03 21:39:04,764 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:39:04] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 21:39:05,003 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:39:05] "[33mGET /ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 404 -
+[ 2025-04-03 21:39:05,114 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:39:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2025-04-03 21:39:11,359 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:39:11,829 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:39:11] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:39:27,169 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:39:27,227 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:39:27] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:39:29,996 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:39:30,062 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:39:30] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:39:50,256 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:39:50,319 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:39:50] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:43:08,743 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:43:08] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 21:43:08,791 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:43:08] "[33mGET /ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 404 -
+[ 2025-04-03 21:43:09,009 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:43:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2025-04-03 21:43:15,504 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:43:15,548 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:43:15] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:43:21,335 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:43:21,365 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:43:21] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:43:26,047 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:43:26,068 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:43:26] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:43:30,765 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:43:30,791 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:43:30] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:43:35,520 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:43:35,551 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:43:35] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:44:01,067 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:44:01,101 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:44:01] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:44:43,028 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:44:43] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 21:44:43,360 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:44:43] "[33mGET /ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 404 -
+[ 2025-04-03 21:44:47,482 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:44:47,520 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:44:47] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:44:51,658 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:44:51,703 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:44:51] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:45:03,435 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:45:03,482 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:45:03] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:45:13,185 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:45:13,213 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:45:13] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:45:50,568 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:45:50] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 21:45:50,592 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:45:50] "[33mGET /ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 404 -
+[ 2025-04-03 21:45:50,834 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:45:50] "[33mGET /ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 404 -
+[ 2025-04-03 21:46:00,407 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:46:00,446 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:46:00] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:46:06,158 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:46:06,180 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:46:06] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:46:10,443 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:46:10,478 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:46:10] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:46:15,144 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:46:15,191 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:46:15] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:46:24,934 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:46:24,977 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:46:24] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:46:33,408 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:46:33,440 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:46:33] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:46:39,940 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:46:39,973 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:46:39] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:46:54,583 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:46:54,617 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:46:54] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:46:57,096 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:46:57,132 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:46:57] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:47:09,680 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:47:09,708 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:47:09] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:47:17,150 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:47:17,183 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:47:17] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:47:23,752 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:47:23,802 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:47:23] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:47:30,204 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:47:30,243 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:47:30] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:47:55,389 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:47:55,418 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:47:55] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:48:05,747 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:48:05,775 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:48:05] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:48:14,537 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:48:14,582 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:48:14] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:48:23,560 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:48:23,607 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:48:23] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:48:35,867 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:48:35,897 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:48:35] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:48:42,434 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:48:42,474 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:48:42] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:48:47,571 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:48:47,616 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:48:47] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:48:52,784 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:48:52,818 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:48:52] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:48:57,503 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:48:57,533 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:48:57] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:49:05,896 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:49:05,943 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:49:05] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 21:50:04,319 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:50:04] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 21:50:04,647 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:50:04] "[33mGET /ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 404 -
+[ 2025-04-03 21:50:04,650 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:50:04] "[33mGET /DiamondPricePrediction/templates/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 404 -
+[ 2025-04-03 21:50:07,722 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:50:07] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 21:50:08,032 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:50:08] "[33mGET /DiamondPricePrediction/templates/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 404 -
+[ 2025-04-03 21:50:08,048 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:50:08] "[33mGET /ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 404 -
+[ 2025-04-03 22:15:29,514 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:15:29] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 22:15:29,530 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:15:29] "[33mGET /DiamondPricePrediction/templates/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 404 -
+[ 2025-04-03 22:15:31,869 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:15:31] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 22:15:32,180 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:15:32] "[33mGET /DiamondPricePrediction/templates/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 404 -

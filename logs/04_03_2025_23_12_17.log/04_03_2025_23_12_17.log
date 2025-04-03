@@ -1,0 +1,79 @@
+[ 2025-04-03 23:12:18,965 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-04-03 23:12:18,968 ] 97 werkzeug - INFO -  * Debugger PIN: 509-397-375
+[ 2025-04-03 23:12:36,619 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:12:36] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 23:12:36,800 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:12:36] "GET /static/images/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1" 200 -
+[ 2025-04-03 23:12:36,861 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:12:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2025-04-03 23:12:46,096 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 23:12:46,539 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:12:46] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 23:13:56,663 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:13:56] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 23:13:56,702 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:13:56] "[36mGET /static/images/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 304 -
+[ 2025-04-03 23:13:56,926 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:13:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2025-04-03 23:15:32,124 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:15:32] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 23:15:32,142 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:15:32] "[36mGET /static/images/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 304 -
+[ 2025-04-03 23:15:37,146 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:15:37] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 23:15:37,496 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:15:37] "[36mGET /static/images/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 304 -
+[ 2025-04-03 23:15:49,485 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:15:49] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 23:15:49,793 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:15:49] "[36mGET /static/images/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 304 -
+[ 2025-04-03 23:16:39,189 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:16:39] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 23:16:39,205 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:16:39] "[36mGET /static/images/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 304 -
+[ 2025-04-03 23:16:50,860 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:16:50] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 23:16:51,173 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:16:51] "[36mGET /static/images/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 304 -
+[ 2025-04-03 23:17:24,093 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:17:24] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 23:17:24,114 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:17:24] "[36mGET /static/images/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 304 -
+[ 2025-04-03 23:17:48,775 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:17:48] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 23:17:49,067 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:17:49] "[36mGET /static/images/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 304 -
+[ 2025-04-03 23:18:03,187 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:18:03] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 23:18:03,238 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:18:03] "[36mGET /static/images/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 304 -
+[ 2025-04-03 23:18:13,503 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 23:18:13,565 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:18:13] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 23:18:18,854 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 23:18:18,908 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:18:18] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 23:18:25,270 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 23:18:25,331 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:18:25] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 23:18:30,487 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 23:18:30,552 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:18:30] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 23:18:35,420 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 23:18:35,482 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:18:35] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 23:24:04,107 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:24:04] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 23:24:04,124 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:24:04] "[36mGET /static/images/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 304 -
+[ 2025-04-03 23:24:09,710 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:24:09] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 23:24:10,030 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:24:10] "[36mGET /static/images/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 304 -
+[ 2025-04-03 23:28:48,005 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:28:48] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 23:28:48,036 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:28:48] "[36mGET /static/images/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 304 -
+[ 2025-04-03 23:28:48,256 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:28:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2025-04-03 23:29:00,679 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 23:29:00,721 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:29:00] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 23:29:06,447 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 23:29:06,471 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:29:06] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 23:29:10,524 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 23:29:10,550 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:29:10] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 23:29:21,560 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 23:29:21,588 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:29:21] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 23:50:54,685 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:50:54] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 23:50:54,703 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:50:54] "[36mGET /static/images/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 304 -
+[ 2025-04-03 23:50:54,945 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:50:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2025-04-03 23:50:59,173 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 23:50:59,221 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:50:59] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 23:51:05,361 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 23:51:05,398 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:51:05] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 23:51:10,324 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 23:51:10,363 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:51:10] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 23:51:17,414 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 23:51:17,450 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:51:17] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 23:51:25,401 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 23:51:25,436 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 23:51:25] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-04 00:04:13,231 ] 97 werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 00:04:13] "GET / HTTP/1.1" 200 -
+[ 2025-04-04 00:04:13,261 ] 97 werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 00:04:13] "[36mGET /static/images/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 304 -
+[ 2025-04-04 00:04:26,003 ] 97 werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 00:04:26] "GET / HTTP/1.1" 200 -
+[ 2025-04-04 00:04:26,340 ] 97 werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 00:04:26] "[36mGET /static/images/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 304 -
+[ 2025-04-04 00:07:00,624 ] 97 werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 00:07:00] "GET / HTTP/1.1" 200 -
+[ 2025-04-04 00:07:00,640 ] 97 werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 00:07:00] "[36mGET /static/images/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 304 -
+[ 2025-04-04 00:07:00,836 ] 97 werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 00:07:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2025-04-04 00:07:42,949 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-04 00:07:43,018 ] 97 werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 00:07:43] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-04 00:07:47,127 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-04 00:07:47,186 ] 97 werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 00:07:47] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-04 00:10:27,939 ] 97 werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 00:10:27] "GET / HTTP/1.1" 200 -
+[ 2025-04-04 00:10:27,973 ] 97 werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 00:10:27] "[36mGET /static/images/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 304 -
+[ 2025-04-04 00:10:40,823 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-04 00:10:40,894 ] 97 werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 00:10:40] "POST /predict HTTP/1.1" 200 -

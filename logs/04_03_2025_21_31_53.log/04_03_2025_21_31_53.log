@@ -1,0 +1,19 @@
+[ 2025-04-03 21:31:55,336 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-04-03 21:31:55,349 ] 97 werkzeug - INFO -  * Debugger PIN: 509-397-375
+[ 2025-04-03 21:32:32,558 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:32:32] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 21:32:32,606 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:32:32] "[33mGET /ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 404 -
+[ 2025-04-03 21:32:32,650 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:32:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2025-04-03 21:32:40,252 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:32:42,570 ] 25 root - INFO - Exception occured in prediction_Pipeline
+[ 2025-04-03 21:32:42,576 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:32:42] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+[ 2025-04-03 21:34:59,169 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:34:59] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 21:34:59,216 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:34:59] "[33mGET /ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 404 -
+[ 2025-04-03 21:35:08,008 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:35:08,087 ] 25 root - INFO - Exception occured in prediction_Pipeline
+[ 2025-04-03 21:35:08,096 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:35:08] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+[ 2025-04-03 21:35:12,198 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:35:12] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 21:35:12,233 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:35:12] "[33mGET /ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 404 -
+[ 2025-04-03 21:35:16,635 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 21:35:16,716 ] 25 root - INFO - Exception occured in prediction_Pipeline
+[ 2025-04-03 21:35:16,720 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 21:35:16] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+[ 2025-04-03 21:35:58,792 ] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\KIIT\\OneDrive\\Desktop\\DIAMOND PRICE PREDICTOR PROJECT\\DiamondPricePrediction\\src\\components\\model_trainer.py', reloading

@@ -1,0 +1,12 @@
+[ 2025-04-04 00:45:54,119 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-04-04 00:45:54,121 ] 97 werkzeug - INFO -  * Debugger PIN: 509-397-375
+[ 2025-04-04 00:45:56,452 ] 97 werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 00:45:56] "GET / HTTP/1.1" 200 -
+[ 2025-04-04 00:45:56,512 ] 97 werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 00:45:56] "[36mGET /static/images/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 304 -
+[ 2025-04-04 00:45:56,705 ] 97 werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 00:45:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2025-04-04 00:46:00,593 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-04 00:46:00,812 ] 97 werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 00:46:00] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-04 00:46:07,866 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-04 00:46:07,897 ] 97 werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 00:46:07] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-04 01:01:34,377 ] 97 werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 01:01:34] "GET / HTTP/1.1" 200 -
+[ 2025-04-04 01:01:34,405 ] 97 werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 01:01:34] "[36mGET /static/images/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 304 -
+[ 2025-04-04 01:01:34,643 ] 97 werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 01:01:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

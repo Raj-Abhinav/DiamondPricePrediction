@@ -1,0 +1,34 @@
+[ 2025-04-03 22:16:37,190 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-04-03 22:16:37,194 ] 97 werkzeug - INFO -  * Debugger PIN: 509-397-375
+[ 2025-04-03 22:16:50,097 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:16:50] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 22:16:50,339 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:16:50] "[33mGET /DiamondPricePrediction/templates/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 404 -
+[ 2025-04-03 22:16:50,462 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:16:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2025-04-03 22:20:42,601 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:20:42] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 22:20:42,617 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:20:42] "[33mGET /DiamondPricePrediction/templates/index.html HTTP/1.1[0m" 404 -
+[ 2025-04-03 22:20:42,718 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:20:42] "[33mGET /DiamondPricePrediction/templates/index.html HTTP/1.1[0m" 404 -
+[ 2025-04-03 22:20:43,048 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:20:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2025-04-03 22:20:45,223 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:20:45] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 22:20:45,532 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:20:45] "[33mGET /DiamondPricePrediction/templates/index.html HTTP/1.1[0m" 404 -
+[ 2025-04-03 22:24:35,452 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:24:35] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 22:24:35,477 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:24:35] "[33mGET /DiamondPricePrediction/templates/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 404 -
+[ 2025-04-03 22:24:35,686 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:24:35] "[33mGET /DiamondPricePrediction/templates/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 404 -
+[ 2025-04-03 22:24:36,011 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:24:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2025-04-03 22:24:38,943 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 22:24:41,039 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:24:41] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 22:25:50,512 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:25:50] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 22:25:50,531 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:25:50] "[33mGET /templates/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 404 -
+[ 2025-04-03 22:25:50,760 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:25:50] "[33mGET /DiamondPricePrediction/templates/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 404 -
+[ 2025-04-03 22:41:20,430 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:41:20] "GET / HTTP/1.1" 200 -
+[ 2025-04-03 22:41:20,671 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:41:20] "[33mGET /image/ai-generated-a-diamond-with-a-transparent-background-png.webp HTTP/1.1[0m" 404 -
+[ 2025-04-03 22:41:24,065 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 22:41:24,133 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:41:24] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 22:41:30,241 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 22:41:30,271 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:41:30] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 22:41:34,058 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 22:41:34,088 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:41:34] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 22:41:38,015 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 22:41:38,047 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:41:38] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 22:41:41,858 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 22:41:41,881 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:41:41] "POST /predict HTTP/1.1" 200 -
+[ 2025-04-03 22:41:48,203 ] 64 root - INFO - Dataframe Gathered
+[ 2025-04-03 22:41:48,236 ] 97 werkzeug - INFO - 127.0.0.1 - - [03/Apr/2025 22:41:48] "POST /predict HTTP/1.1" 200 -
