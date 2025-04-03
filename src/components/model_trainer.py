@@ -35,7 +35,7 @@ class ModelTrainer:
                 'Lasso':Lasso(),
                 'Ridge':Ridge(),
                 'ElasticNet':ElasticNet(),
-                'DecisionTree':DecisionTreeRegressor()
+                'DecisionTree':DecisionTreeRegressor(random_state=42)
             }
 
             model_report : dict=evaluate_model(x_train,y_train,x_test,y_test,models)

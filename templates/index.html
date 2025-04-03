@@ -1,1 +1,1395 @@
-<h1> this is the home page</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Price Prediction App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            overflow-x: hidden;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #f0f2f5;
+            height: 100vh;
+            border-right: 1px solid #ddd;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar-header {
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar-header svg {
+            margin-right: 10px;
+            fill: #1b078b;
+        }
+
+        .sidebar-content {
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .sidebar-section {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            padding-left: 15px;
+            font-size: 12px;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .sidebar-item {
+            padding: 15px;
+            font-size: 14px;
+            color: #080707;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar-item svg {
+            margin-right: 10px;
+            fill: #333;
+        }
+
+        .sidebar-item:hover {
+            background-color: #e0e3e9;
+        }
+
+        .sidebar-item.active {
+            background-color: #e6eaff;
+            color: #0c079d;
+            font-weight: bold;
+        }
+
+        .sidebar-item.active svg {
+            fill: #100774;
+        }
+
+        .sidebar-footer {
+            padding: 15px;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sidebar-footer-item {
+            display: flex;
+            align-items: center;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .sidebar-footer-item svg {
+            margin-right: 8px;
+        }
+
+        .theme-toggle {
+            cursor: pointer;
+        }
+
+        /* Animation for cards */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animation for diamond image */
+        @keyframes diamondGlow {
+            0% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 5px rgba(114, 9, 183, 0.3));
+            }
+
+            50% {
+                transform: scale(1.05);
+                filter: drop-shadow(0 0 15px rgba(114, 9, 183, 0.6));
+            }
+
+            100% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 5px rgba(114, 9, 183, 0.3));
+            }
+        }
+
+        /* Apply animation to info cards */
+        .info-card {
+            animation: fadeInUp 0.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        .info-card:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .info-card:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .info-card:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        /* Apply animation to diamond image */
+        .diamond-image {
+            animation: diamondGlow 3s infinite ease-in-out;
+        }
+
+        .info-card svg {
+            width: 60px;
+            height: 60px;
+            fill: #7209b7;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease, fill 0.3s ease;
+        }
+
+        .info-card:hover svg {
+            transform: scale(1.2) rotate(5deg);
+            fill: #fe1313;
+        }
+
+        .info-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 300px;
+            animation: fadeInUp 0.5s ease-out forwards;
+            opacity: 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(183, 9, 9, 0.2);
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 30px;
+            margin-left: 250px;
+            width: calc(100% - 250px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .page-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    background: linear-gradient(45deg, #0b0693, #0a9a24, #1d38c0);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    text-shadow: 0 2px 10px rgba(9, 50, 183, 0.2);
+    animation: gradientShift 5s ease infinite, shimmer 3s infinite;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* Add a subtle diamond effect to the header container */
+.header {
+    position: relative;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(21, 9, 183, 0.6), transparent);
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(9, 32, 183, 0.6), transparent);
+}
+
+        .diamond-image {
+            width: 250px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .content-section {
+            width: 100%;
+            max-width: 1000px;
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .info-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .info-card svg {
+            width: 60px;
+            height: 60px;
+            fill: #7209b7;
+            margin-bottom: 15px;
+        }
+
+        .info-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .info-card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .welcome-text,
+        .note-text {
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+            margin: 15px auto;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .note-text {
+            font-weight: bold;
+            color: #96280c;
+            font-size: 14px;
+            margin-top: 30px;
+        }
+
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+
+        .form-column {
+            flex: 1;
+            min-width: 300px;
+            padding: 0 15px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .slider-container {
+            width: 88%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 5px;
+            border-radius: 5px;
+            background: #d3d3d3;
+            outline: none;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #7209b7;
+            cursor: pointer;
+        }
+
+        .slider-values {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5px;
+            color: #777;
+        }
+
+        .slider-value {
+            font-size: 14px;
+        }
+
+        .select-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .results-container {
+            margin-top: 20px;
+            width: 94%;
+        }
+
+        .selected-values {
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .values-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+            text-align: center;
+        }
+
+        .values-table {
+            width: 100%;
+            border-collapse: collapse;
+            overflow-x: auto;
+            display: block;
+        }
+
+        .values-table th,
+        .values-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+            min-width: 100px;
+        }
+
+        .values-table th {
+            background-color: #f8f9fa;
+            color: #555;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .predict-button {
+            padding: 10px 25px;
+            background-color: #b70917;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+
+        .predict-button:hover {
+            background-color: #071196;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(114, 9, 183, 0.3);
+        }
+
+        .loading-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #e9ecef;
+            margin-top: 15px;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .loading-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #6c757d;
+            font-size: 14px;
+        }
+
+        .prediction-result {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #d4edda;
+            border-radius: 5px;
+            color: #155724;
+            width: 97%;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+
+        #home-page {
+            display: block;
+            width: 100%;
+        }
+
+        #prediction-page {
+            display: none;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+
+            .main-content {
+                margin-left: 200px;
+                width: calc(100% - 200px);
+                padding: 20px;
+            }
+
+            .form-column {
+                min-width: 100%;
+            }
+
+            .content-section {
+                flex-direction: column;
+            }
+
+            .info-card {
+                max-width: 100%;
+            }
+        }
+
+        /* Process Steps Styles */
+        .process-steps {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .process-steps h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+            color: #333;
+        }
+
+        .step {
+            display: flex;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 0.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        .step:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .step:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .step:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+        .step:nth-child(5) {
+            animation-delay: 0.8s;
+        }
+
+        .step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(114, 9, 183, 0.2);
+        }
+
+        .step-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #0b0693, #0a9a24);
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-content h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .step-content p {
+            margin: 0;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .info-section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .info-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+            color: #333;
+        }
+
+        .attribute-info {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .attribute-info h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .attribute-info ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .attribute-info li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        /* FAQs Page */
+        .faq-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 0.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        .faq-item:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .faq-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .faq-item:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .faq-item:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .faq-item:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .faq-item:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .faq-item:nth-child(7) {
+            animation-delay: 0.7s;
+        }
+
+        .faq-item:nth-child(8) {
+            animation-delay: 0.8s;
+        }
+
+        .faq-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(114, 9, 183, 0.2);
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+            position: relative;
+            font-size: 16px;
+        }
+
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '−';
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px;
+            max-height: 500px;
+        }
+
+        #how-it-works-page,
+        #faqs-page {
+            display: none;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                </path>
+            </svg>
+            Diamond Predictor
+        </div>
+        <div class="sidebar-content">
+            <div class="sidebar-section">NAVIGATION</div>
+            <div class="sidebar-item active" id="nav-main">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
+                </svg>
+                Home
+            </div>
+            <div class="sidebar-item" id="nav-prediction">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                    <path
+                        d="M23 8c0 1.1-.9 2-2 2-.18 0-.35-.02-.51-.07l-3.56 3.55c.05.16.07.34.07.52 0 1.1-.9 2-2 2s-2-.9-2-2c0-.18.02-.36.07-.52l-2.55-2.55c-.16.05-.34.07-.52.07s-.36-.02-.52-.07l-4.55 4.56c.05.16.07.33.07.51 0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2c.18 0 .35.02.51.07l4.56-4.55C8.02 9.36 8 9.18 8 9c0-1.1.9-2 2-2s2 .9 2 2c0 .18-.02.36-.07.52l2.55 2.55c.16-.05.34-.07.52-.07s.36.02.52.07l3.55-3.56C19.02 8.35 19 8.18 19 8c0-1.1.9-2 2-2s2 .9 2 2z">
+                    </path>
+                </svg>
+                Prediction Tool
+            </div>
+            <div class="sidebar-section">DOCUMENTATION</div>
+            <div class="sidebar-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+                    </path>
+                </svg>
+                How It Works
+            </div>
+            <div class="sidebar-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                    <path
+                        d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z">
+                    </path>
+                </svg>
+                FAQs
+            </div>
+            <div class="sidebar-section"></div>
+            
+            
+            
+            
+            
+        </div>
+        <div class="sidebar-footer">
+            <div class="sidebar-footer-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                    <path
+                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z">
+                    </path>
+                </svg>
+                Guest User
+            </div>
+            <div class="theme-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                    <path
+                        d="M12.79 9l3 3-7 7-3-3 7-7zm6.21-3c.39.39.39 1.02 0 1.41l-1.83 1.83-3.75-3.75 1.83-1.83c.39-.39 1.02-.39 1.41 0l2.34 2.34zm-.71-2.34c-.39-.39-1.02-.39-1.41 0l-9.48 9.48-3.75 1.48 1.48-3.75 9.48-9.48c.39-.39 1.02-.39 1.41 0l2.27 2.27z">
+                    </path>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div id="home-page">
+            <div class="header">
+                <h1 class="page-title">Diamond Price Prediction</h1>
+                <p class="page-subtitle">Accurately estimate diamond prices using advanced machine learning techniques
+                </p>
+                <img src="/static/images/ai-generated-a-diamond-with-a-transparent-background-png.webp" alt="Diamond"
+                    class="diamond-image">
+            </div>
+
+            <div class="content-section">
+                <div class="info-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14h-2V9h-2V7h4v10z">
+                        </path>
+                    </svg>
+                    <h3>Accurate Predictions</h3>
+                    <p>Our algorithm utilizes the latest machine learning techniques to provide highly accurate diamond
+                        price estimates.</p>
+                </div>
+                <div class="info-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+                        </path>
+                    </svg>
+                    <h3>Easy To Use</h3>
+                    <p>Simply input the diamond's characteristics and receive an instant price estimate - no expertise
+                        required.</p>
+                </div>
+                <div class="info-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z">
+                        </path>
+                    </svg>
+                    <h3>Data Security</h3>
+                    <p>Your data is processed securely and never shared with third parties. We prioritize your privacy.
+                    </p>
+                </div>
+            </div>
+
+            <p class="welcome-text">
+                Welcome to the Diamond Price Prediction App! Diamonds are one of the most precious gemstones, and their
+                prices can vary based on various factors such as carat weight, color, clarity, and more.
+            </p>
+            <p class="welcome-text">
+                This app utilizes the power of Data Science and Machine Learning to help you predict the price of a
+                diamond based on its characteristics. Whether you are a diamond enthusiast, a jeweler, or simply curious
+                about diamond prices, this app is designed to provide valuable insights and predictions.
+            </p>
+            <p class="welcome-text">
+                By inputting the relevant attributes of a diamond, such as carat weight, color, clarity, and more, the
+                app will leverage a trained machine learning model to estimate the price of the diamond. You can explore
+                different scenarios and observe how each attribute impacts the predicted price.
+            </p>
+
+            <p class="note-text">
+                *Note: The predictions provided by this app are based on a trained model and should be used for
+                informational purposes only.*
+            </p>
+        </div>
+
+        <div id="prediction-page">
+            <div class="header">
+                <h1 class="page-title">Diamond Price Prediction</h1>
+                <img src="/static/images/ai-generated-a-diamond-with-a-transparent-background-png.webp" alt="Diamond"
+                    class="diamond-image">
+            </div>
+            
+
+            <div class="prediction-form">
+                <div class="form-row">
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label class="form-label">Write a value for carat</label>
+                            <div class="slider-container">
+                                <input type="range" min="0" max="6" value="0.42" step="0.01" class="slider"
+                                    id="carat-slider">
+                                <div class="slider-values">
+                                    <span class="slider-value">0.00</span>
+                                    <span class="slider-value">6.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Choose a color:</label>
+                            <select class="select-input" id="color-select">
+                                <option value="H">H</option>
+                                <option value="D">D</option>
+                                <option value="E">E</option>
+                                <option value="F">F</option>
+                                <option value="G">G</option>
+                                <option value="I">I</option>
+                                <option value="J">J</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Choose a clarity:</label>
+                            <select class="select-input" id="clarity-select">
+                                <option value="VS1">VS1</option>
+                                <option value="IF">IF</option>
+                                <option value="VVS1">VVS1</option>
+                                <option value="VVS2">VVS2</option>
+                                <option value="VS2">VS2</option>
+                                <option value="SI1">SI1</option>
+                                <option value="SI2">SI2</option>
+                                <option value="I1">I1</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Choose a cut:</label>
+                            <select class="select-input" id="cut-select">
+                                <option value="Ideal">Ideal</option>
+                                <option value="Premium">Premium</option>
+                                <option value="Very Good">Very Good</option>
+                                <option value="Good">Good</option>
+                                <option value="Fair">Fair</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label class="form-label">Select a width (X):</label>
+                            <div class="slider-container">
+                                <input type="range" min="1" max="10" value="2" step="0.01" class="slider"
+                                    id="width-slider">
+                                <div class="slider-values">
+                                    <span class="slider-value">1.00</span>
+                                    <span class="slider-value">10.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Select Table Column Value:</label>
+                            <div class="slider-container">
+                                <input type="range" min="40" max="80" value="50" step="1" class="slider"
+                                    id="table-slider">
+                                <div class="slider-values">
+                                    <span class="slider-value">40</span>
+                                    <span class="slider-value">80</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Select a length (Y):</label>
+                            <div class="slider-container">
+                                <input type="range" min="1" max="10" value="2" step="0.01" class="slider"
+                                    id="length-slider">
+                                <div class="slider-values">
+                                    <span class="slider-value">1.00</span>
+                                    <span class="slider-value">10.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Select a depth (Z):</label>
+                            <div class="slider-container">
+                                <input type="range" min="1" max="10" value="2" step="0.01" class="slider"
+                                    id="depth-slider">
+                                <div class="slider-values">
+                                    <span class="slider-value">1.00</span>
+                                    <span class="slider-value">10.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Select depth percentage:</label>
+                            <div class="slider-container">
+                                <input type="range" min="40" max="80" value="60" step="0.1" class="slider"
+                                    id="depth-percent-slider">
+                                <div class="slider-values">
+                                    <span class="slider-value">40.0%</span>
+                                    <span class="slider-value">80.0%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-container">
+                    <div class="selected-values">
+                        <h2 class="values-title">The values you have chosen:</h2>
+                        <table class="values-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>carat</th>
+                                    <th>color</th>
+                                    <th>clarity</th>
+                                    <th>cut</th>
+                                    <th>x</th>
+                                    <th>y</th>
+                                    <th>z</th>
+                                    <th>depth%</th>
+                                    <th>Table Column</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>0</td>
+                                    <td id="carat-value">0.4180</td>
+                                    <td id="color-value">H</td>
+                                    <td id="clarity-value">VS1</td>
+                                    <td id="cut-value">Ideal</td>
+                                    <td id="width-value">2.0000</td>
+                                    <td id="length-value">2.0000</td>
+                                    <td id="depth-value">2.0000</td>
+                                    <td id="depth-percent-value">60.0</td>
+                                    <td id="table-column-value">50</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="button-container">
+                        <button class="predict-button" id="predict-button">Predict</button>
+                    </div>
+
+                    <div class="loading-bar" id="loading-bar" style="display: none;">
+                        <div class="loading-text">Loading...</div>
+                    </div>
+
+                    <div class="prediction-result" id="prediction-result" style="display: none;">
+                        The predicted price is: $<span id="price-value">964.49</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="how-it-works-page" style="display: none;">
+            <div class="header">
+                <h1 class="page-title">How It Works</h1>
+                <img src="/static/images/ai-generated-a-diamond-with-a-transparent-background-png.webp" alt="Diamond" class="diamond-image">
+            </div>
+            
+            <div class="content-section">
+                <div class="info-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                    </svg>
+                    <h3>Data Collection</h3>
+                    <p>Our model was trained on a comprehensive dataset of real diamond prices and characteristics.</p>
+                </div>
+                <div class="info-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M12 11c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm6 2c0-3.31-2.69-6-6-6s-6 2.69-6 6c0 2.22 1.21 4.15 3 5.19l1-1.74c-1.19-.7-2-1.97-2-3.45 0-2.21 1.79-4 4-4s4 1.79 4 4c0 1.48-.81 2.75-2 3.45l1 1.74c1.79-1.04 3-2.97 3-5.19zM12 3C6.48 3 2 7.48 2 13c0 3.7 2.01 6.92 4.99 8.65l1-1.73C5.61 18.53 4 15.96 4 13c0-4.42 3.58-8 8-8s8 3.58 8 8c0 2.96-1.61 5.53-4 6.92l1 1.73c2.99-1.73 5-4.95 5-8.65 0-5.52-4.48-10-10-10z"></path>
+                    </svg>
+                    <h3>Machine Learning</h3>
+                    <p>Advanced regression algorithms identify patterns between diamond attributes and market prices.</p>
+                </div>
+                <div class="info-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14h-2v-7h2v7zm4 0h-2V7h2v10zm-8-2H6V9h2v6z"></path>
+                    </svg>
+                    <h3>Real-Time Prediction</h3>
+                    <p>Our application processes your inputs and delivers instant price estimations based on current market data.</p>
+                </div>
+            </div>
+            
+            <div class="process-steps">
+                <h2>Our Prediction Process</h2>
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Input Diamond Characteristics</h3>
+                        <p>Enter the diamond's key attributes including carat weight, cut quality, color grade, clarity grade, and dimensions.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>AI Processing</h3>
+                        <p>Our machine learning model analyzes the inputs and compares them against thousands of market data points.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Price Calculation</h3>
+                        <p>The algorithm calculates the most probable market price based on the unique combination of attributes.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Results</h3>
+                        <p>Your estimated diamond price is displayed instantly, helping you make informed decisions.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <h2>Understanding Diamond Attributes</h2>
+                <div class="attribute-info">
+                    <h3>The 4Cs of Diamonds</h3>
+                    <ul>
+                        <li><strong>Carat:</strong> The weight of the diamond. 1 carat equals 200 milligrams.</li>
+                        <li><strong>Cut:</strong> How well the diamond is cut, affecting its brilliance and sparkle.</li>
+                        <li><strong>Color:</strong> The absence of color, graded from D (colorless) to Z (light yellow).</li>
+                        <li><strong>Clarity:</strong> The absence of inclusions and blemishes, ranging from Flawless to Included.</li>
+                    </ul>
+                </div>
+                <div class="attribute-info">
+                    <h3>Additional Factors</h3>
+                    <ul>
+                        <li><strong>Dimensions (x, y, z):</strong> The physical measurements of the diamond.</li>
+                        <li><strong>Table:</strong> The flat facet on the top of the diamond.</li>
+                        <li><strong>Depth %:</strong> The height of the diamond relative to its width.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="faqs-page" style="display: none;">
+            <div class="header">
+                <h1 class="page-title">Frequently Asked Questions</h1>
+                <img src="/static/images/ai-generated-a-diamond-with-a-transparent-background-png.webp" alt="Diamond" class="diamond-image">
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">How accurate is the diamond price prediction?</div>
+                    <div class="faq-answer">Our model has been trained on thousands of diamond data points and achieves a high level of accuracy. However, market conditions, unique diamond characteristics, and other factors can influence the actual price. We recommend using our prediction as a guideline rather than an absolute valuation.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Which factors have the biggest impact on diamond prices?</div>
+                    <div class="faq-answer">Carat weight typically has the most significant impact on a diamond's price, followed by cut, color, and clarity. A larger diamond will generally cost more than a smaller one of the same quality. However, exceptional quality in terms of cut, color, and clarity can significantly increase a diamond's value regardless of size.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Can I use this tool for all types of diamonds?</div>
+                    <div class="faq-answer">This tool is designed primarily for natural, round brilliant cut diamonds. While it can provide estimates for other shapes, the accuracy may vary. Additionally, the tool does not account for specialty diamonds such as colored diamonds or those with unique treatments.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What do the color grades mean?</div>
+                    <div class="faq-answer">Diamond color grades range from D (completely colorless) to Z (light yellow or brown). D, E, and F diamonds are considered colorless; G, H, I, and J are near colorless; K through M have faint color; and N through Z have increasingly visible yellow or brown tints.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How should I interpret the clarity grades?</div>
+                    <div class="faq-answer">Clarity grades indicate the presence of inclusions (internal flaws) or blemishes (surface flaws). The scale ranges from Flawless (FL - no inclusions or blemishes visible under 10x magnification) to Included (I1, I2, I3 - inclusions visible to the naked eye). Common grades include IF (Internally Flawless), VVS1/VVS2 (Very Very Slightly Included), VS1/VS2 (Very Slightly Included), and SI1/SI2 (Slightly Included).</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Why do table and depth percentage matter?</div>
+                    <div class="faq-answer">Table percentage (the width of the top facet relative to the diamond's width) and depth percentage (the height relative to width) affect how light travels through the diamond. Optimal proportions allow maximum light return, creating the sparkle diamonds are known for. Poor proportions can make a diamond appear dull or dark.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How often is the prediction model updated?</div>
+                    <div class="faq-answer">We regularly update our model to reflect current market conditions and diamond pricing trends. Our goal is to provide the most accurate predictions based on the latest available data.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Can I use this tool to determine the value of my existing diamond?</div>
+                    <div class="faq-answer">Yes, you can use this tool as a starting point for estimating your diamond's value. However, for a more accurate valuation, especially for insurance or resale purposes, we recommend consulting with a certified gemologist who can physically examine the diamond.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Page navigation functionality
+            const pages = {
+                home: document.getElementById('home-page'),
+                prediction: document.getElementById('prediction-page'),
+                howItWorks: document.getElementById('how-it-works-page'),
+                faqs: document.getElementById('faqs-page')
+            };
+
+            function switchPage(pageName) {
+                // Hide all pages
+                Object.values(pages).forEach(page => {
+                    if (page) page.style.display = 'none';
+                });
+                
+                // Show selected page
+                if (pages[pageName]) {
+                    pages[pageName].style.display = 'block';
+                }
+            }
+
+            function setActiveNavItem(clickedItem) {
+                // Remove active class from all nav items
+                document.querySelectorAll('.sidebar-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Add active class to clicked item
+                clickedItem.classList.add('active');
+            }
+
+            // Navigation sidebar items
+            document.getElementById('nav-main').addEventListener('click', function () {
+                switchPage('home');
+                setActiveNavItem(this);
+            });
+
+            document.getElementById('nav-prediction').addEventListener('click', function () {
+                switchPage('prediction');
+                setActiveNavItem(this);
+            });
+
+            // Add event listeners for How It Works and FAQs navigation
+            document.querySelectorAll('.sidebar-item').forEach(item => {
+                if (item.textContent.trim() === 'How It Works') {
+                    item.addEventListener('click', function () {
+                        switchPage('howItWorks');
+                        setActiveNavItem(this);
+                    });
+                }
+                if (item.textContent.trim() === 'FAQs') {
+                    item.addEventListener('click', function () {
+                        switchPage('faqs');
+                        setActiveNavItem(this);
+                    });
+                }
+            });
+
+            // FAQ functionality
+            document.querySelectorAll('.faq-question').forEach(question => {
+                question.addEventListener('click', function() {
+                    const faqItem = this.parentElement;
+                    const isActive = faqItem.classList.contains('active');
+                    
+                    // Close all FAQ items
+                    document.querySelectorAll('.faq-item').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    
+                    // Toggle current FAQ item
+                    if (!isActive) {
+                        faqItem.classList.add('active');
+                    }
+                });
+            });
+
+            // Slider value updates
+            const caratSlider = document.getElementById('carat-slider');
+            const widthSlider = document.getElementById('width-slider');
+            const lengthSlider = document.getElementById('length-slider');
+            const depthSlider = document.getElementById('depth-slider');
+            const depthPercentSlider = document.getElementById('depth-percent-slider');
+            const tableSlider = document.getElementById('table-slider');
+
+            if (caratSlider) {
+                caratSlider.addEventListener('input', function () {
+                    document.getElementById('carat-value').textContent = parseFloat(this.value).toFixed(4);
+                });
+            }
+
+            if (widthSlider) {
+                widthSlider.addEventListener('input', function () {
+                    document.getElementById('width-value').textContent = parseFloat(this.value).toFixed(4);
+                });
+            }
+
+            if (lengthSlider) {
+                lengthSlider.addEventListener('input', function () {
+                    document.getElementById('length-value').textContent = parseFloat(this.value).toFixed(4);
+                });
+            }
+
+            if (depthSlider) {
+                depthSlider.addEventListener('input', function () {
+                    document.getElementById('depth-value').textContent = parseFloat(this.value).toFixed(4);
+                });
+            }
+
+            if (depthPercentSlider) {
+                depthPercentSlider.addEventListener('input', function () {
+                    document.getElementById('depth-percent-value').textContent = parseFloat(this.value).toFixed(1);
+                });
+            }
+
+            if (tableSlider) {
+                tableSlider.addEventListener('input', function () {
+                    document.getElementById('table-column-value').textContent = this.value;
+                });
+            }
+
+            // Select input updates
+            const colorSelect = document.getElementById('color-select');
+            const claritySelect = document.getElementById('clarity-select');
+            const cutSelect = document.getElementById('cut-select');
+
+            if (colorSelect) {
+                colorSelect.addEventListener('change', function () {
+                    document.getElementById('color-value').textContent = this.value;
+                });
+            }
+
+            if (claritySelect) {
+                claritySelect.addEventListener('change', function () {
+                    document.getElementById('clarity-value').textContent = this.value;
+                });
+            }
+
+            if (cutSelect) {
+                cutSelect.addEventListener('change', function () {
+                    document.getElementById('cut-value').textContent = this.value;
+                });
+            }
+
+            // Predict button functionality
+            const predictButton = document.getElementById('predict-button');
+            if (predictButton) {
+                predictButton.addEventListener('click', function () {
+                    const loadingBar = document.getElementById('loading-bar');
+                    const predictionResult = document.getElementById('prediction-result');
+
+                    // Show loading bar
+                    if (loadingBar) loadingBar.style.display = 'block';
+
+                    // Collect form data
+                    const formData = new FormData();
+                    formData.append('carat', document.getElementById('carat-value').textContent);
+                    formData.append('depth', document.getElementById('depth-value').textContent);
+                    formData.append('table', document.getElementById('table-column-value').textContent);
+                    formData.append('x', document.getElementById('width-value').textContent);
+                    formData.append('y', document.getElementById('length-value').textContent);
+                    formData.append('z', document.getElementById('depth-value').textContent);
+                    formData.append('cut', document.getElementById('cut-select').value);
+                    formData.append('color', document.getElementById('color-select').value);
+                    formData.append('clarity', document.getElementById('clarity-select').value);
+
+                    // Send data to backend
+                    fetch('/predict', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        // Hide loading bar
+                        if (loadingBar) loadingBar.style.display = 'none';
+
+                        // Show prediction result
+                        if (predictionResult) {
+                            predictionResult.style.display = 'block';
+                            if (data.error) {
+                                document.getElementById('price-value').textContent = 'Error: ' + data.error;
+                            } else {
+                                document.getElementById('price-value').textContent = data.price;
+                            }
+                        }
+                    })
+                    .catch(error => {
+                        // Hide loading bar
+                        if (loadingBar) loadingBar.style.display = 'none';
+
+                        // Show error
+                        if (predictionResult) {
+                            predictionResult.style.display = 'block';
+                            document.getElementById('price-value').textContent = 'Error: ' + error.message;
+                        }
+                    });
+                });
+            }
+
+            // Initialize with home page
+            switchPage('home');
+        });
+
+    </script>
+    
+
+</body>
+
+</html>
